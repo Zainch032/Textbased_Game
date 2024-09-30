@@ -1,0 +1,51 @@
+{
+    "Entrance": {
+        "description": "The main entrance of the bank, with a security guard at the door and a metal detector.",
+        "exits": {
+            "north": "Lobby"
+        },
+        "items": [
+            "Access card"
+        ],
+        "puzzle": null
+    },
+    "Lobby": {
+        "description": "A spacious lobby with chairs, a waiting area, and a help desk. Customers are being attended to.",
+        "exits": {
+            "south": "Entrance",
+            "north": "Vault",
+            "east": "Teller Counter",
+            "west": "Manager’s Office"
+        },
+        "items": [
+            "pass"
+        ],
+        "puzzle": null
+    },
+    "Teller Counter": {
+        "description": "A long counter where bank tellers assist customers with transactions. There is a cash drawer behind the counter.",
+        "exits": {
+            "west": "Lobby"
+        },
+        "items": [
+            "letter"
+        ],
+        "puzzle": {
+            "question": "The cash drawer is locked. Solve this riddle: 'What has a head, a tail, is brown, and has no legs?'",
+            "answer": "coin"
+        }
+    },
+    "Manager’s Office": {
+        "description": "The bank manager’s office is well-furnished with a desk and a computer. There is an emergency exit door here.",
+        "exits": {
+            "east": "Lobby"
+        },
+        "items": [
+            "Desk key"
+        ],
+        "puzzle": {
+            "question": "The manager’s desk is locked. Find the key to unlock it.",
+            "answer": "desk key"
+        }
+    }
+}
