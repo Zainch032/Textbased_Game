@@ -47,10 +47,7 @@
         "items": [
             "Desk key"
         ],
-        "puzzle": {
-            "question": "The manager’s desk is locked. Find the key to unlock it.",
-            "answer": "desk key"
-        }
+        "puzzle": null
     },
     "Vault": {
         "description": "A highly secure area with a large steel door. Inside the vault are safety deposit boxes.",
@@ -72,10 +69,7 @@
             "west": "Vault"
         },
         "items": [],
-        "puzzle": {
-            "question": "You need a key to open the locker.",
-            "answer": "Gold Key"
-        }
+        "puzzle": null
     },
     "Secret Room": {
         "description": "A hidden room revealed by solving the manager’s puzzle. Inside, there are rare artifacts.",
