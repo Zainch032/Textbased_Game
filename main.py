@@ -24,11 +24,12 @@ def display_menu():
     print("="*40)
 
 def main():
-    while True:
-        game_functions.look(game_functions.current_room)
+   while True:
+        game_functions.look(game_functions.player["current_room"])
 
         # Get the player's command and split into action and arguments
-        command = input("\nEnter a command (look, go [direction], take [item], drop [item], use [item], inventory, solve, save, load, quit): ").split()
+        display_menu()
+        command = input("\nEnter a command: ").split()
 
         if len(command) == 0:
             print("Invalid command. Please try again.")
