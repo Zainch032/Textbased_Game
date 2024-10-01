@@ -103,16 +103,13 @@ def take(item):
 
 def drop(item):
     """Drop an item from the inventory into the current room."""
-    item = item.lower()
-    inv_items = [i.lower() for i in inventory]
-
-    if item in inv_items:
-        original_item = inventory[inv_items.index(item)]
-        inventory.remove(original_item)
-        bank_map[current_room]['items'].append(original_item)
-        print(f"You have dropped: {original_item}")
+    if item in player['items']:
+        inventory.remove(item)
+        bank_map[current_room]['items'].append(item)
+        print(f"You have dropped: {item}")
     else:
         print(f"You don't have {item} in your inventory.")
+
 
 def use_item(item):
     """Use an item to interact with the current room."""
