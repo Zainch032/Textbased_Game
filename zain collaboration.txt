@@ -1,0 +1,24 @@
+========================
+        Collaboration
+========================
+
+**Collaborator:** Zain
+
+**Role:** Maintainer
+
+**Contributions:**
+- Developed overall game logic.
+- Designed the game map and its structure.
+- Implemented core functions including:
+  - **take function**: Allows players to pick up items from rooms.
+  - **drop function**: Enables players to leave items in the current room.
+  - **solve function**: Facilitates solving puzzles within the game.
+  - **go function**: Handles movement between different rooms, including checks for required items.
+  - **main function**: Manages user interaction and processes commands input by the player.
+- Conceptualized the game's storyline and player interactions.
+
+**Key Features of the Game:**
+- Multiple rooms with unique descriptions and items.
+- Puzzles to engage players and unlock rewards.
+- Inventory system for players to manage collected items.
+- Interactive commands for a seamless user experience.

@@ -1,0 +1,207 @@
+===============================
+   Welcome to the Bank Adventure Game!
+===============================
+
+You are at the **Entrance** of the bank.
+There is a security guard at the door and a metal detector.
+Items in this room: **Access card**
+
+------------------------------------
+Enter a command (look, go [direction], take [item], drop [item], use [item], inventory, solve, save, load, quit): **look**
+------------------------------------
+
+You are at the **Entrance** of the bank.
+There is a security guard at the door and a metal detector.
+Items in this room: **Access card**
+
+------------------------------------
+Enter a command: **solve**
+------------------------------------
+
+There is a puzzle here: **What is 5 + 7?**
+Give answer of it
+Your answer: **12**
+
+**Correct!** The puzzle is solved.
+You received a reward: **Access card**.
+
+------------------------------------
+Enter a command: **go north**
+------------------------------------
+
+You moved to **Lobby**.
+A spacious lobby with chairs, a waiting area, and a help desk. Customers are being attended to.
+Items in this room: **pass**
+
+------------------------------------
+Enter a command: **look**
+------------------------------------
+
+You are in the **Lobby**.
+A spacious lobby with chairs, a waiting area, and a help desk. Customers are being attended to.
+Items in this room: **pass**
+
+------------------------------------
+Enter a command: **take pass**
+------------------------------------
+
+You took the **pass**.
+
+------------------------------------
+Enter a command: **go east**
+------------------------------------
+
+You need the **Access card** to enter the Teller Counter.
+Do you want to go back to the Entrance to get the Access card? (yes/no): **no**
+
+You decided to stay in the Lobby.
+
+------------------------------------
+Enter a command: **go north**
+------------------------------------
+
+You moved to **Vault**.
+A highly secure area with a large steel door. Inside the vault are safety deposit boxes.
+Items in this room: **Gold Key**
+
+------------------------------------
+Enter a command: **look**
+------------------------------------
+
+You are in the **Vault**.
+A highly secure area with a large steel door. Inside the vault are safety deposit boxes.
+Items in this room: **Gold Key**
+
+------------------------------------
+Enter a command: **take gold key**
+------------------------------------
+
+You took the **Gold Key**.
+
+------------------------------------
+Enter a command: **go south**
+------------------------------------
+
+You moved to **Lobby**.
+A spacious lobby with chairs, a waiting area, and a help desk. Customers are being attended to.
+Items in this room: **pass**
+
+------------------------------------
+Enter a command: **go west**
+------------------------------------
+
+You need the **Permission letter** to enter the Manager’s Office.
+Do you want to go to the Teller Counter to get the Permission letter? (yes/no): **yes**
+
+You moved to **Teller Counter**.
+A long counter where bank tellers assist customers with transactions. There is a cash drawer behind the counter.
+Items in this room: **letter**
+
+------------------------------------
+Enter a command: **look**
+------------------------------------
+
+You are at the **Teller Counter**.
+A long counter where bank tellers assist customers with transactions. There is a cash drawer behind the counter.
+Items in this room: **letter**
+
+------------------------------------
+Enter a command: **take letter**
+------------------------------------
+
+You took the **letter**.
+
+------------------------------------
+Enter a command: **go west**
+------------------------------------
+
+You moved to **Lobby**.
+A spacious lobby with chairs, a waiting area, and a help desk. Customers are being attended to.
+Items in this room: (none)
+
+------------------------------------
+Enter a command: **go west**
+------------------------------------
+
+You moved to **Manager’s Office**.
+The bank manager’s office is well-furnished with a desk and a computer. There is an emergency exit door here.
+Items in this room: **Desk key**
+
+------------------------------------
+Enter a command: **look**
+------------------------------------
+
+You are in the **Manager’s Office**.
+The bank manager’s office is well-furnished with a desk and a computer. There is an emergency exit door here.
+Items in this room: **Desk key**
+
+------------------------------------
+Enter a command: **take desk key**
+------------------------------------
+
+You took the **Desk key**.
+
+------------------------------------
+Enter a command: **go south**
+------------------------------------
+
+You moved to **Vault**.
+A highly secure area with a large steel door. Inside the vault are safety deposit boxes.
+Items in this room: (none)
+
+------------------------------------
+Enter a command: **solve**
+------------------------------------
+
+There is a puzzle here: **What is the square root of 16?**
+Give answer of it
+Your answer: **4**
+
+**Correct!** The puzzle is solved.
+You received a reward: **letter**.
+
+------------------------------------
+Enter a command: **look**
+------------------------------------
+
+You are in the **Vault**.
+A highly secure area with a large steel door. Inside the vault are safety deposit boxes.
+Items in this room: **letter**
+
+------------------------------------
+Enter a command: **go east**
+------------------------------------
+
+You moved to **Locker Room**.
+A small room filled with lockers. Each locker is secured with a lock that requires a key.
+Items in this room: (none)
+
+------------------------------------
+Enter a command: **use gold key**
+------------------------------------
+
+You used the **Gold Key** to open a locker.
+A treasure has been revealed!
+
+------------------------------------
+Enter a command: **inventory**
+------------------------------------
+
+Your inventory contains: **Access card, pass, letter, Desk key, Gold Key**
+
+------------------------------------
+Enter a command: **solve**
+------------------------------------
+
+There is a puzzle here: **This secret room can only be opened using the Gold Key from the Vault.**
+Give answer of it
+Your answer: **gold key**
+
+**Correct!** The puzzle is solved.
+
+------------------------------------
+Enter a command: **go south**
+------------------------------------
+
+You moved to **Secret Room**.
+A hidden room revealed
