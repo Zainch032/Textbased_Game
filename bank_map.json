@@ -11,7 +11,7 @@
             "question": "What is 5 + 7?",
             "answer": "12",
             "reward": "Access card"
-    },
+    }},
     "Lobby": {
         "description": "A spacious lobby with chairs, a waiting area, and a help desk. Customers are being attended to.",
         "exits": {
@@ -85,3 +85,4 @@
         }
     }
 }
+    
