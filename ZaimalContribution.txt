@@ -1,0 +1,13 @@
+Zaimal's Contributions to the Project
+
+Player Dictionary Creation:
+Developed a structured player dictionary that stores essential player attributes, such as position and status, allowing for easy access and management.
+
+Modification of the Go Method
+Enhanced the existing Go method, ensuring smoother player movement and interaction within the game world.
+
+New Move Method Implementation:
+Designed and implemented a new Move method, which improved player navigation and made movement mechanics more intuitive.
+
+Functionality Testing:
+Conducted initial functionality checks to ensure that core features, including movement and interactions, are operating as intended.
