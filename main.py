@@ -1,5 +1,28 @@
 import game_functions
 
+
+def display_menu():
+    print("\n" + "="*40)
+    print("              GAME MENU")
+    print("="*40)
+    print("1. Movement:")
+    print("   - go ")
+    print("     Directions: north, south, east, west")
+    print("\n2. Actions:")
+    print("   - look: Observe the surroundings")
+    print("   - take [item]: Pick up an item")
+    print("   - drop [item]: Drop an item from inventory")
+    print("   - use [item]: Use an item from inventory")
+    print("\n3. Inventory Management:")
+    print("   - inventory: Check items in your possession")
+    print("\n4. Puzzle/Special Actions:")
+    print("   - solve: Solve a puzzle in the room")
+    print("\n5. Game Management:")
+    print("   - save: Save your current progress")
+    print("   - load: Load a saved game")
+    print("   - quit: Exit the game")
+    print("="*40)
+
 def main():
     while True:
         game_functions.look(game_functions.current_room)
