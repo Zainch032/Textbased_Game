@@ -1,0 +1,89 @@
+{
+    "Entrance": {
+        "description": "The main entrance of the bank, with a security guard at the door and a metal detector.",
+        "exits": {
+            "north": "Lobby"
+        },
+        "items": [
+            "access card"
+        ],
+        "puzzle": null
+    },
+    "Lobby": {
+        "description": "A spacious lobby with chairs, a waiting area, and a help desk. Customers are being attended to.",
+        "exits": {
+            "south": "Entrance",
+            "north": "Vault",
+            "east": "Teller Counter",
+            "west": "Manager’s Office"
+        },
+        "items": [
+            "pass"
+        ],
+        "puzzle": null
+    },
+    "Teller Counter": {
+        "description": "A long counter where bank tellers assist customers with transactions. There is a cash drawer behind the counter.",
+        "exits": {
+            "west": "Lobby"
+        },
+        "items": [
+            "letter"
+        ],
+        "puzzle": {
+            "question": "The cash drawer is locked. Solve this riddle: 'What has a head, a tail, is brown, and has no legs?'",
+            "answer": "coin"
+        }
+    },
+    "Manager’s Office": {
+        "description": "The bank manager’s office is well-furnished with a desk and a computer. There is an emergency exit door here.",
+        "exits": {
+            "east": "Lobby"
+        },
+        "items": [
+            "desk key"
+        ],
+        "puzzle": {
+            "question": "The manager’s desk is locked. Find the key to unlock it.",
+            "answer": "desk key"
+        }
+    },
+    "Vault": {
+        "description": "A highly secure area with a large steel door. Inside the vault are safety deposit boxes.",
+        "exits": {
+            "south": "Lobby",
+            "east": "Locker Room"
+        },
+        "items": [
+            "gold key"
+        ],
+        "puzzle": {
+            "question": "The vault door requires a security code. Find clues in the bank to unlock it.",
+            "answer": "1234"
+        }
+    },
+    "Locker Room": {
+        "description": "A small room filled with lockers. Each locker is secured with a lock that requires a key.",
+        "exits": {
+            "west": "Vault"
+        },
+        "items": [],
+        "puzzle": {
+            "question": "You need a key to open the locker.",
+            "answer": "Gold Key"
+        }
+    },
+    "Secret Room": {
+        "description": "A hidden room revealed by solving the manager’s puzzle. Inside, there are rare artifacts.",
+        "exits": {
+            "south": "Manager’s Office"
+        },
+        "items": [
+            "ancient coins"
+        ],
+        "puzzle": {
+            "question": "This secret room can only be opened using the Gold Key from the Vault.",
+            "answer": "gold key"
+        }
+    }
+}
