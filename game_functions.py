@@ -2,88 +2,73 @@ import json
 
 # Initialize player inventory and starting room
 inventory = []
-current_room = 'Entrance'
 
-# Load the bank map from the file
+player = {
+    "current_room" : 'Entrance', 
+    "items" : ["pass","letter" , "Access card" , "Gold Key"]
+}
 with open("bank_map.json", 'r') as f:
     bank_map = json.load(f)
 
-# Core game functions
-def df(action, argument=None):
-    """Handles core actions like 'look', 'go', 'take', 'drop', 'use', and 'solve'."""
-    global current_room
+# wants_to_get_access_card = False  # Flag to check if player wants to get Access card
+# wants_to_get_permission_letter = False  # Flag to check if player wants to get Permission letter
 
-    if action == "look":
-        look(current_room)
-    elif action == "go":
-        go(argument)
-    elif action == "take":
-        take(argument)
-    elif action == "drop":
-        drop(argument)
-    elif action == "use":
-        use_item(argument)
-    elif action == "inventory":
-        show_inventory()
-    elif action == "solve":
-        solve_puzzle()
-    else:
-        print("Invalid command. Please try again.")
 
-# Flags for specific actions
-wants_to_get_access_card = False  # Flag to check if player wants to get Access card
-wants_to_get_permission_letter = False  # Flag to check if player wants to get Permission letter
+def move(item_needed , direction):
+  try:
+    if item_needed != "None":
+        if direction in bank_map[player["current_room"]]["exits"]: 
+            next_room = bank_map[player["current_room"]]["exits"][direction]
+            if item_needed in player["items"]:
+                print(player['current_room'], next_room)
+                player['current_room'] = next_room
+                return
+            else:
+                print(f"You can't go that way because you do not have {item_needed}!")
+        else:
+            print("Direction not present")
+    else:  
+        if direction in bank_map[player["current_room"]]["exits"]:  # Check if direction exists
+            next_room = bank_map[player["current_room"]]["exits"][direction]
+            print(next_room)
+            player['current_room'] = next_room
+            return
+        else:
+            print("No room present!")
+  except KeyError as e:
+     print(f"Error: Invalid room or exit direction. Details: {e}")
 
-# Function to move between rooms
 def go(direction):
-    """Move to a different room if possible."""
-    global current_room, wants_to_get_access_card, wants_to_get_permission_letter
-
-    # Check if player tries to move east from Lobby without Access card
-    if current_room == 'Lobby' and direction == 'east' and 'Access card' not in inventory:
-        print("You need the Access card to enter the Counter.")
-        response = input("Do you want to go back to the Entrance to get the Access card? (yes/no): ").lower().strip()
-
-        if response == "yes":
-            wants_to_get_access_card = True
-            current_room = 'Entrance'  # Move to Entrance
-            look(current_room)         # Show description of Entrance
+    try:
+        if player['current_room'] == 'Entrance':
+            move("Access card", direction)
+        elif player["current_room"] == "Lobby":
+            move("pass", direction)
+        elif player["current_room"] == "Vault":
+            move("Gold Key", direction)
+        elif player["current_room"] == "Teller Counter":
+            move("letter", direction)
         else:
-            print("You decided to stay in the Lobby.")
-        return  # Exit function after handling decision
-
-    # Check if player tries to move west from Lobby without Permission letter
-    if current_room == 'Lobby' and direction == 'west' and 'letter' not in inventory:
-        print("You need the Permission letter to enter the Manager’s Office.")
-        response = input("Do you want to go to the Counter to get the Permission letter? (yes/no): ").lower().strip()
-
-        if response == "yes":
-            wants_to_get_permission_letter = True
-            current_room = 'Counter'  # Move to Counter
-            look(current_room)        # Show description of Counter
-        else:
-            print("You decided to stay in the Lobby.")
-        return  # Exit function after handling decision
-
-    # Normal room movement
-    if direction in bank_map[current_room]['exits']:
-        current_room = bank_map[current_room]['exits'][direction]
-        print(f"You moved to {current_room}.")
-        look(current_room)  # Automatically display room description
-    else:
-        print("You can't go that way.")
+            move(direction, "None")
+    except KeyError as e:
+        print(f"Error: Invalid room or direction. Details: {e}")
+    finally:
+        print(f"Current location: {player['current_room']}")
 
 # Function to take items from the room
 def take(item):
     """Take an item from the current room."""
-    # All item are in lower case so no need to check or convert them into lower case
-    if item in bank_map[current_room]['items']:
-        bank_map[current_room]['items'].remove(item)
-        inventory.append(item)
-        print(f"You took the {item}.")
-    else:
-        print(f"There is no {item} here.")
-
+    try:
+        if item in bank_map[player['current_room']]['items']:
+            bank_map[player['current_room']]['items'].remove(item)
+            inventory.append(item)
+            print(f"You took the {item}.")
+        else:
+            print(f"There is no {item} here.")
+    except KeyError as e:
+        print(f"Error while trying to take item: {e}")
+    finally:
+        print(f"Current inventory: {', '.join(inventory) if inventory else 'Empty'}")
 # Function to drop items into the room
 def drop(item):
     """Drop an item from the inventory into the current room."""
